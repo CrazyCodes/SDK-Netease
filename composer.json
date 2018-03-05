@@ -1,0 +1,27 @@
+{
+  "name": "mysdk/netease",
+  "description": "网易云信 直播、点播、IM 服务端Api",
+  "keywords": [
+    "php",
+    "netease",
+    "api",
+    "直播"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Crazy",
+      "email": "919342864@qq.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "guzzlehttp/guzzle": "^6.3",
+    "php": ">=5.6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Live\\": "src/"
+    }
+  }
+}
