@@ -22,7 +22,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/channel/create', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'name' => $name,
 				'type' => 0,
 			]);
@@ -42,7 +42,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/channel/update', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'name' => $name,
 				'cid'  => $cid,
 				'type' => 0,
@@ -63,7 +63,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/channel/delete', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'cid' => $cid,
 			]);
 			
@@ -82,7 +82,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/channelstats', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'cid' => $cid,
 			]);
 			
@@ -102,7 +102,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/channellist', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'records' => $records,
 				'pnum'    => $pnum,
 				'ofield'  => $ofield,
@@ -124,7 +124,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/address', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'cid' => $cid,
 			]);
 			
@@ -147,7 +147,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/channel/setAlwaysRecord', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'cid'        => $cid,
 				'needRecord' => $needRecord,
 				'format'     => $format,
@@ -170,7 +170,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/channel/pause', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'cid' => $cid,
 			]);
 			
@@ -189,7 +189,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/channel/pause', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'cidList' => \GuzzleHttp\json_encode ($cidList),
 			]);
 			
@@ -208,7 +208,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/channel/resume', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'cid' => $cid,
 			]);
 			
@@ -229,7 +229,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/videolist', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'cid'     => $cid,
 				'records' => $records,
 				'pnum'    => $pnum,
@@ -252,7 +252,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/vodvideolist', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'cid'       => $cid,
 				'beginTime' => $beginTime,
 				'endTime'   => $endTime,
@@ -273,7 +273,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/record/setcallback', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'recordClk' => $recordClk,
 			]);
 			
@@ -292,7 +292,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/callback/setSignKey', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'signKey' => $signKey,
 			]);
 			
@@ -311,7 +311,7 @@
 		{
 			$client = new HttpClient('https://vcloud.163.com/app/video/merge', 'POST');
 			
-			$response = $client->send ([
+			$response = $client->sendC ([
 				'outputName' => $outputName,
 				'vidList'    => $vidList,
 			]);
