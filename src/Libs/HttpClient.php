@@ -46,4 +46,24 @@
 		}
 		
 		
+		public function sendC($params)
+		{
+			$client = new Client();
+			
+			$response = $client->request ($this->method, $this->url,
+				['headers' =>
+					 [
+						 'Content-Type' => 'application/json;charset=utf-8',
+						 'AppKey'       => $this->appKey,
+						 'Nonce'        => $this->nonce,
+						 'CurTime'      => $this->curTime,
+						 'CheckSum'     => $this->checkSum,
+					 ],
+				 'body'    => json_encode ($params),
+				]
+			);
+			
+			return $response->getBody ();
+		}
+		
 	}
